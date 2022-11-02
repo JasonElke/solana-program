@@ -1,0 +1,14 @@
+[features]
+seeds = false
+[programs.devnet]
+solana_program = "aYCFmDitW6N7y6B5TgDpBqbiY1jeNuCAq6tuDP7EEw5"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/Users/thuongthai/.config/solana/id.json"
+
+[scripts]
+test = "yarn run mocha -t 1000000 tests/"
