@@ -58,7 +58,6 @@ export default function Main({ network, voteAccount }) {
   async function initializeVoting() {
     const provider = await getProvider();
     const program = new Program(idl, programID, provider);
-    console.log(programID, "programID");
     try {
       await program.rpc.initialize({
         accounts: {
@@ -68,7 +67,6 @@ export default function Main({ network, voteAccount }) {
         },
         signers: [voteAccount],
       });
-      console.log("aaa")
       const account = await program.account.voteAccount.fetch(
         voteAccount.publicKey
       );
